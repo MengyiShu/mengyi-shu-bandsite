@@ -17,4 +17,31 @@ body {
 }
 .home-logo__link {
   text-decoration: none;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.home-nav {
+  background-color: #323232;
+}
+.home-nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.home-nav__item {
+  width: 50%;
+  list-style: none;
+  text-align: center;
+  padding: 24px 24px;
+  margin: 0;
+}
+.home-nav__link {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 14px;
+}
+.home-nav__selected {
+  border-bottom: 5px solid #FFFFFF;
 }/*# sourceMappingURL=bio.css.map */
