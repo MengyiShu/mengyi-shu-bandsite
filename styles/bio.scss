@@ -241,28 +241,76 @@ h2{
 
 footer{
     background-color: $bandsiteblack;
-}
-.footerheader{
-    @include text-styles(24px,32px,700);
-    color:$white;
-    padding:16px;
+
 }
 .footer{
-    &-imgcontainer{
+    &-header{
+        @include tablet{
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+
+        }
+        &__title{
+            @include text-styles(24px,32px,700);
+            color:$white;
+            padding:16px;
+            @include tablet{
+            display: inline-block;
+            width:20%;}
+
+        }
+        &__imgcontainer{
+            padding:16px;
+            @include tablet{
+            display: inline-block;
+            padding:24px;
+            width:70%;
+        }
+        }   
         &__img{
             padding:16px;
+            @include tablet{
+                padding:24px;
+            }
         }
+
+
+
+    } 
+    &-body{
+        @include tablet{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
         }
-         &__section{
+        &__section{
             padding:16px;
+            @include tablet{
+            width:25%;
+            }
+
         }
         &__text{
             @include text-styles(13px,18px,400);
             color:$white;
             margin:0;
         }
+        &__copy{
+            width:100%;
+            padding:16px;
+        }
+
+    }  
 }
+
+
 
 .footer-logo{
     text-align: left;
+        @include tablet{
+        display: none;
+    }
 }
+
+
