@@ -5,6 +5,7 @@ body {
 
 h2 {
   margin: 0;
+  width: 100%;
 }
 
 /*Index navigation*/
@@ -16,32 +17,32 @@ h2 {
 .home-logo {
   text-align: center;
   background-color: #323232;
-  padding: 16px;
+  padding: 1rem;
 }
 @media (min-width: 768px) {
   .home-logo {
     text-align: center;
     background-color: #323232;
-    padding: 36px;
+    padding: 2.25rem;
   }
 }
 .home__image {
   text-align: center;
   width: 50%;
-  width: 120px;
-  height: 20px;
+  width: 7.5rem;
+  height: 1.25rem;
 }
 .home__link {
   text-decoration: none;
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 700;
 }
 @media (min-width: 768px) {
   .home__link {
     text-decoration: none;
-    font-size: 60px;
-    line-height: 68px;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
     font-weight: 700;
   }
 }
@@ -72,13 +73,13 @@ h2 {
   width: 50%;
   list-style: none;
   text-align: center;
-  padding: 16px;
+  padding: 1rem;
   margin: 0;
 }
 @media (min-width: 768px) {
   .home-nav__item {
     width: 30%;
-    padding: 36px;
+    padding: 2.25rem;
     margin: 0;
     list-style: none;
     text-align: center;
@@ -87,53 +88,53 @@ h2 {
 .home-nav__link {
   text-decoration: none;
   color: #FFFFFF;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   font-weight: 700;
 }
 @media (min-width: 768px) {
   .home-nav__link {
     text-decoration: none;
     color: #FFFFFF;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
     font-weight: 600;
   }
 }
 .home-nav__selected {
-  border-bottom: 5px solid #FFFFFF;
+  border-bottom: 0.313rem solid #FFFFFF;
 }
 
 .hero {
   margin-top: 0;
   padding: 0;
   width: 100%;
-  height: 400px;
+  height: 25rem;
   background-image: url("../assets/Images/hero-bio.jpg");
   background-size: cover;
   background-position: center;
 }
 .hero__text {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 700;
   color: #FFFFFF;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 @media (min-width: 768px) {
   .hero__text {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     font-weight: 700;
     color: #FFFFFF;
-    padding-left: 36px;
-    padding-right: 36px;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
   }
 }
 .hero__overlay {
   width: 100%;
-  height: 400px;
+  height: 25rem;
   display: flex;
   align-items: center;
   background-color: rgba(50, 50, 50, 0.5);
@@ -142,25 +143,25 @@ h2 {
 }
 
 .musician__header {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 700;
   color: #323232;
-  padding-top: 24px;
-  padding-bottom: 16px;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 11rem;
 }
 @media (min-width: 768px) {
   .musician__header {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     font-weight: 700;
     color: #323232;
-    padding-top: 48px;
-    padding-bottom: 36px;
-    padding-left: 36px;
-    padding-right: 36px;
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
   }
 }
 .musician-imgcontainer {
@@ -172,34 +173,34 @@ h2 {
   max-width: 92%;
   max-height: 92%;
   padding-top: 0;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 @media (min-width: 768px) {
   .musician-imgcontainer__img {
     padding-top: 0;
-    padding-left: 36px;
-    padding-right: 36px;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
   }
 }
 .musician__subheader {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   font-weight: 600;
   color: #323232;
-  padding-top: 24px;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   margin: 0;
   text-align: left;
 }
 @media (min-width: 768px) {
   .musician__subheader {
-    padding-top: 48px;
-    padding-left: 36px;
-    padding-right: 36px;
-    font-size: 24px;
-    line-height: 32px;
+    padding-top: 3rem;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+    font-size: 21.5rem;
+    line-height: 2rem;
     font-weight: 600;
   }
 }
@@ -207,20 +208,20 @@ h2 {
   .musician-bodytext__container {
     -moz-column-count: 2;
          column-count: 2;
-    padding: 36px;
+    padding: 2.25rem;
   }
 }
 .musician__bodytext {
-  font-size: 12px;
-  line-height: 18px;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
   font-weight: 400;
   color: #323232;
-  padding: 16px;
+  padding: 1rem;
 }
 @media (min-width: 768px) {
   .musician__bodytext {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
     font-weight: 400;
     margin: 0;
     padding: 0;
@@ -231,41 +232,41 @@ h2 {
   background-color: #FAFAFA;
 }
 .photogallery__header {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 700;
   color: #323232;
-  padding-top: 24px;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 @media (min-width: 768px) {
   .photogallery__header {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     font-weight: 700;
-    padding-top: 48px;
-    padding-left: 36px;
-    padding-right: 36px;
+    padding-top: 3rem;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
   }
 }
 .photogallery-box {
   display: flex;
   flex-direction: column;
-  padding: 16px;
+  padding: 1rem;
 }
 @media (min-width: 768px) {
   .photogallery-box {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: 36px;
+    padding: 2.25rem;
   }
 }
 .photogallery-box__container {
   text-align: center;
   margin: 0;
-  padding-top: 16px;
+  padding-top: 1rem;
 }
 @media (min-width: 768px) {
   .photogallery-box__container {
@@ -292,16 +293,16 @@ footer {
   }
   .footer-logo__link {
     text-decoration: none;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 1.5rem;
+    line-height: 2rem;
     font-weight: 700;
   }
 }
 @media (min-width: 768px) and (min-width: 768px) {
   .footer-logo__link {
     text-decoration: none;
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     font-weight: 700;
   }
 }
@@ -321,40 +322,40 @@ footer {
   }
 }
 .footer-header__title {
-  font-size: 24px;
-  line-height: 32px;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 700;
   color: #FFFFFF;
-  padding: 16px;
+  padding: 1rem;
 }
 @media (min-width: 768px) {
   .footer-header__title {
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
     font-weight: 700;
     display: inline-block;
     width: 30%;
-    padding: 36px;
+    padding: 2.25rem;
   }
 }
 .footer-header__imgcontainer {
-  padding: 16px;
+  padding: 1rem;
 }
 @media (min-width: 768px) {
   .footer-header__imgcontainer {
     display: inline-block;
-    padding: 36px;
+    padding: 1rem;
   }
 }
 .footer-header__img {
-  padding: 16px;
+  padding: 1rem;
 }
 @media (min-width: 768px) {
   .footer-body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 36px;
+    padding: 2.25rem;
   }
 }
 @media (min-width: 768px) {
@@ -363,30 +364,30 @@ footer {
   }
 }
 .footer-body__text {
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
   font-weight: 400;
   color: #FFFFFF;
   margin: 0;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 @media (min-width: 768px) {
   .footer-body__text {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
     font-weight: 400;
     padding: 0;
   }
 }
 .footer-body__copy {
   width: 100%;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .footer-body__copy {
-    padding-top: 36px;
+    padding-top: 2.25rem;
     padding-bottom: 0;
     padding-left: 0;
     padding-right: 0;
@@ -394,9 +395,9 @@ footer {
 }
 .footer-logo {
   text-align: left;
-  padding-top: 24px;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 @media (min-width: 768px) {
   .footer-logo {
