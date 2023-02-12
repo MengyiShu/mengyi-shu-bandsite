@@ -1,6 +1,7 @@
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
 
+
 body{
     margin:0;
     padding:0;
@@ -18,7 +19,7 @@ h2{
     &-logo{
         text-align: center;
         background-color: $bandsiteblack;
-        padding: 16px 16px;
+        padding: 16px;
         @include tablet{
             text-align: center;
             background-color: $bandsiteblack;
@@ -43,9 +44,7 @@ h2{
         }
 
     }
-}
-
-.home-nav{
+    &-nav{
     background-color: $bandsiteblack;
     margin:0;
     padding:0;
@@ -67,11 +66,11 @@ h2{
         width:50%;
         list-style: none;
         text-align: center;
-        padding: 16px 16px;
+        padding: 16px;
         margin:0;
         @include tablet{
            width:30%;
-           padding:24px;
+           padding:36px;
            margin:0;
            list-style: none;
            text-align: center;
@@ -81,7 +80,7 @@ h2{
     &__link{
         text-decoration: none;
         color:$white;
-        @include text-styles(24px,32px,700);
+        @include text-styles(14px,22px,700);
         @include tablet{
             text-decoration: none;
             color:$white;
@@ -94,6 +93,9 @@ h2{
         border-bottom: 5px solid $white;
     }
 }
+}
+
+
 .hero{
     margin-top:0;
     padding:0;
@@ -154,27 +156,35 @@ h2{
         &__img{
             max-width: 92%;
             max-height: 92%;
-            padding:16px;
+            padding-top:0;
+            padding-left:16px;
+            padding-right:16px;
             @include tablet{
-                padding:24px 36px;
+                padding-top:0;
+                padding-left:36px;
+                padding-right:36px;
             }
         }
     }
     &__subheader{
         @include text-styles(14px,22px,600);
         color:$bandsiteblack;
-        padding:16px;
+        padding-top: 24px;
+        padding-left: 16px;
+        padding-right: 16px;
         margin:0;
         text-align: left;
         @include tablet{
-            padding:24px 36px;
+        padding-top: 48px;
+        padding-left: 36px;
+        padding-right: 36px;
             @include text-styles(24px, 32px,600)
         }
     }
     &-bodytext__container{
         @include tablet{
             column-count:2;
-            padding:24px 36px;
+            padding:36px;
         }
     }
     &__bodytext{
@@ -183,8 +193,8 @@ h2{
         padding:16px;
         @include tablet{
             @include text-styles(14px,22px,400);
-            padding:24px;
             margin:0;
+            padding:0;
         }
     }
 }
@@ -193,42 +203,52 @@ h2{
 
 
 
-.photogallerybox{
+.photogallery{
     background-color: $alabaster;
-}
-.photogalleryheader{
+    &__header{
         @include text-styles(24px,32px,700);
         color:$bandsiteblack;
-        padding:16px;
+        padding-top:24px;
+        padding-left:16px;
+        padding-right:16px;
         @include tablet{
             @include text-styles(36px,44px,700);
-            padding:24px 36px;
+            padding-top:48px;
+            padding-left:36px;
+            padding-right:36px;
         }
     }
-.photogallery{
-    display: flex;
-    flex-direction: column;
-    @include tablet{
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        padding:24px 36px;
-    }
-    &-container{
-        text-align: center;
-        margin:0;
-        padding:0;
+    &-box{
+        display: flex;
+        flex-direction: column;
+        padding:16px;
         @include tablet{
-            width:30%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            padding:36px;
+        }
+        &__container{
+            text-align: center;
+            margin:0;
+            padding-top: 16px;
+            @include tablet{
+                text-align: center;
+                margin:0;
+                width:30%;
+            }
         }
         &__img{
-            max-width: 92%;
-            max-height: 92%;
-            padding:16px;
+            max-width: 100%;
+            max-height: 100%;
         }
 
     }
 }
+
+
+
+
 
 footer{
     background-color: $bandsiteblack;
@@ -244,7 +264,7 @@ footer{
             @include text-styles(24px,32px,700);
             @include tablet{
             text-decoration: none;
-            @include text-styles(60px,68px,700); 
+            @include text-styles(36px,44px,700); 
         }
         }
         }
@@ -269,23 +289,21 @@ footer{
             color:$white;
             padding:16px;
             @include tablet{
-            display: inline-block;
-            width:20%;}
+                @include text-styles(36px,44px,700);
+                display: inline-block;
+                width:30%;
+                padding:36px;}
 
         }
         &__imgcontainer{
             padding:16px;
             @include tablet{
             display: inline-block;
-            padding:24px;
-            width:50%;
+            padding:36px;
         }
         }   
         &__img{
             padding:16px;
-            @include tablet{
-                padding:24px;
-            }
         }
 
 
@@ -296,11 +314,11 @@ footer{
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
+            padding:36px;
         }
         &__section{
-            padding:16px;
             @include tablet{
-            width:25%;
+            width:29%;
             }
 
         }
@@ -308,16 +326,31 @@ footer{
             @include text-styles(13px,18px,400);
             color:$white;
             margin:0;
+            padding-left:16px;
+            padding-right:16px;
+            @include tablet{
+                @include text-styles(14px,20px,400);
+                padding:0;
+            }
         }
         &__copy{
             width:100%;
-            padding:16px;
+            padding-top:16px;
+            padding-bottom:16px;
+            @include tablet{
+                padding-top:36px;
+                padding-bottom:0;
+                padding-left:0;
+                padding-right:0;
+            }
         }
 
     }  
     &-logo{
         text-align: left;
-        padding: 16px 16px;
+        padding-top:24px;
+        padding-left:16px;
+        padding-right:16px;
         @include tablet{
             display: none;
         }
