@@ -5,11 +5,27 @@ body{
     margin:0;
     padding:0;
 }
+h2{
+    margin:0;
+}
 /*Index navigation*/
-.home-logo{
-    text-align: center;
-    background-color: $bandsiteblack;
-    padding: 24px 24px;
+
+.home{
+    @include tablet{
+        display:flex;
+    }
+
+    &-logo{
+        text-align: center;
+        background-color: $bandsiteblack;
+        padding: 16px 16px;
+        @include tablet{
+            text-align: center;
+            background-color: $bandsiteblack;
+            padding:36px;
+        }
+
+    }
     &__image{
         text-align: center;
         width:50%;
@@ -20,14 +36,41 @@ body{
     }
     &__link{
         text-decoration: none;
-        @include text-styles__mobile(24px,32px,700);
+        @include text-styles(24px,32px,700);
+        @include tablet{
+            text-decoration: none;
+            @include text-styles(60px,68px,700);            
+        }
 
     }
-    
 }
+// .home-logo{
+//     text-align: center;
+//     background-color: $bandsiteblack;
+//     padding: 24px 24px;
+//     &__image{
+//         text-align: center;
+//         width:50%;
+//         width:120px;
+//         height:20px;
+
+    
+//     }
+//     &__link{
+//         text-decoration: none;
+//         @include text-styles__mobile(24px,32px,700);
+
+//     }
+    
+// }
 
 .home-nav{
     background-color: $bandsiteblack;
+    margin:0;
+    padding:0;
+    @include tablet{
+            width:100%;
+    }
     &__list{
         display: flex;
         margin:0;
@@ -37,16 +80,189 @@ body{
         width:50%;
         list-style: none;
         text-align: center;
-        padding: 24px 24px;
+        padding: 16px 16px;
         margin:0;
+        @include tablet{
+           width:30%;
+           padding:24px;
+           margin:0;
+           list-style: none;
+           text-align: center;
+
+    }
     }
     &__link{
         text-decoration: none;
         color:$white;
-        font-size: 14px;
+        @include text-styles(24px,32px,700);
+        @include tablet{
+            text-decoration: none;
+            color:$white;
+            @include text-styles(24px,32px,600);
+
+        }
 
     }
     &__selected{
         border-bottom: 5px solid $white;
     }
+}
+.hero{
+    margin-top:0;
+    padding:0;
+    width:100%;
+    height:400px;
+    background-image: url("../assets/Images/hero-bio.jpg");
+    background-size: cover;
+    background-position: center;
+    &__text{
+        @include text-styles(24px,32px,700);
+        color:$white;
+        padding-left: 16px;
+        padding-right: 16px;
+        @include tablet{
+            @include text-styles(36px,44px,700);
+            color:$white;
+            padding-left: 36px;
+            padding-right: 36px;
+        }
+        
+    }
+    &__overlay{
+        width:100%;
+        height:400px;
+        display: flex;
+        align-items: center;
+        background-color: rgba(#323232, 0.5);
+        z-index: 1;
+        position:absolute;
+        
+        
+
+    }
+}
+
+.musician{
+    &__header{
+        @include text-styles(24px,32px,700);
+        color:$bandsiteblack;
+        padding-top:24px;
+        padding-bottom:16px;
+        padding-left:16px;
+        padding-right:16px;
+        @include tablet{
+            @include text-styles(36px,44px,700);
+            color:$bandsiteblack;
+            padding-top:48px;
+            padding-bottom:36px;
+            padding-left:36px;
+            padding-right:36px;
+
+        }
+    }
+    &-imgcontainer{
+        text-align: center;
+        margin:0;
+        padding:0;
+        &__img{
+            max-width: 92%;
+            max-height: 92%;
+            padding:16px;
+            @include tablet{
+                padding:24px 36px;
+            }
+        }
+    }
+    &__subheader{
+        @include text-styles(14px,22px,600);
+        color:$bandsiteblack;
+        padding:16px;
+        margin:0;
+        text-align: left;
+        @include tablet{
+            padding:24px 36px;
+            @include text-styles(24px, 32px,600)
+        }
+    }
+    &-bodytext__container{
+        @include tablet{
+            column-count:2;
+            padding:24px 36px;
+        }
+    }
+    &__bodytext{
+        @include text-styles(12px,18px,400);
+        color:$bandsiteblack;
+        padding:16px;
+        @include tablet{
+            @include text-styles(14px,22px,400);
+            padding:24px;
+            margin:0;
+        }
+    }
+}
+
+
+
+
+
+.photogallerybox{
+    background-color: $alabaster;
+}
+.photogalleryheader{
+        @include text-styles(24px,32px,700);
+        color:$bandsiteblack;
+        padding:16px;
+    }
+.photogallery{
+    display: flex;
+    flex-direction: column;
+    @include tablet{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding:24px 36px;
+    }
+    &-container{
+        text-align: center;
+        margin:0;
+        padding:0;
+        @include tablet{
+            width:30%;
+        }
+        &__img{
+            max-width: 92%;
+            max-height: 92%;
+            padding:16px;
+        }
+
+    }
+}
+
+footer{
+    background-color: $bandsiteblack;
+}
+.footerheader{
+    @include text-styles(24px,32px,700);
+    color:$white;
+    padding:16px;
+}
+.footer{
+    &-imgcontainer{
+        &__img{
+            padding:16px;
+        }
+        }
+         &__section{
+            padding:16px;
+        }
+        &__text{
+            @include text-styles(13px,18px,400);
+            color:$white;
+            margin:0;
+        }
+}
+
+.footer-logo{
+    text-align: left;
 }

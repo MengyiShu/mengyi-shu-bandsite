@@ -1,5 +1,20 @@
-@mixin text-styles__mobile($textSize, $lineHeight ,$textWeight){
+@use "./breakpoints" as *;
+
+@mixin text-styles($textSize, $lineHeight ,$textWeight){
     font-size: $textSize;
     line-height: $lineHeight;
     font-weight: $textWeight;
+}
+
+
+@mixin tablet { 
+    @media (min-width: $breakpoint-tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: $breakpoint-desktop) {
+        @content;
+    }
 }
