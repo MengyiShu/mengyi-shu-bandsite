@@ -44,30 +44,12 @@ h2{
 
     }
 }
-// .home-logo{
-//     text-align: center;
-//     background-color: $bandsiteblack;
-//     padding: 24px 24px;
-//     &__image{
-//         text-align: center;
-//         width:50%;
-//         width:120px;
-//         height:20px;
-
-    
-//     }
-//     &__link{
-//         text-decoration: none;
-//         @include text-styles__mobile(24px,32px,700);
-
-//     }
-    
-// }
 
 .home-nav{
     background-color: $bandsiteblack;
     margin:0;
     padding:0;
+    width:100%;
     @include tablet{
             width:100%;
     }
@@ -75,6 +57,11 @@ h2{
         display: flex;
         margin:0;
         padding:0;
+        height:100%;
+        width:100%;
+        @include tablet{
+            width:50%;
+        }
     }
     &__item{
         width:50%;
@@ -213,6 +200,10 @@ h2{
         @include text-styles(24px,32px,700);
         color:$bandsiteblack;
         padding:16px;
+        @include tablet{
+            @include text-styles(36px,44px,700);
+            padding:24px 36px;
+        }
     }
 .photogallery{
     display: flex;
@@ -244,6 +235,20 @@ footer{
 
 }
 .footer{
+    &-logo{
+        text-align: left;
+        @include tablet{
+        display: none;
+        &__link{
+            text-decoration: none;
+            @include text-styles(24px,32px,700);
+            @include tablet{
+            text-decoration: none;
+            @include text-styles(60px,68px,700); 
+        }
+        }
+        }
+    }
     &-header{
         @include tablet{
             display:flex;
@@ -251,6 +256,14 @@ footer{
             align-items: center;
 
         }
+        &__logo{
+            display:none;
+            @include tablet{
+                display: inline-block;
+            }
+        }
+            
+
         &__title{
             @include text-styles(24px,32px,700);
             color:$white;
@@ -265,7 +278,7 @@ footer{
             @include tablet{
             display: inline-block;
             padding:24px;
-            width:70%;
+            width:50%;
         }
         }   
         &__img{
@@ -302,15 +315,16 @@ footer{
         }
 
     }  
-}
-
-
-
-.footer-logo{
-    text-align: left;
+    &-logo{
+        text-align: left;
+        padding: 16px 16px;
         @include tablet{
-        display: none;
+            display: none;
+        }
     }
 }
+
+
+
 
 
