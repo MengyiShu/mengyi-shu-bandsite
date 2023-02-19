@@ -414,7 +414,7 @@ button {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 80%;
+  width: 65%;
 }
 .display__text-name {
   font-size: 14px;
