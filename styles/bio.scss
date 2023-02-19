@@ -2,15 +2,15 @@
 @use "./partials/mixins" as *;
 @use "./partials/typography" as *;
 
-
+*{
+    font-family: AvenirNext;
+}
 body{
     margin:0;
     padding:0;
-    font-family: AvenirNext;
 }
 h2{
     margin:0;
-    width:100%;
 }
 /*Index navigation*/
 
@@ -136,6 +136,7 @@ h2{
 
 .musician{
     &__header{
+        display:inline-block;
         @include text-styles(1.5rem,2rem,700);
         color:$bandsiteblack;
         padding-top:1.5rem;
@@ -248,6 +249,113 @@ h2{
 
     }
 }
+
+//Comment Section
+.comment{
+
+    &__header{
+        @include text-styles(1.5rem,2rem,700);
+        color:$bandsiteblack;
+        padding-top:1.5rem;
+        padding-left:1rem;
+        padding-right:1rem;
+        padding-bottom: 1rem;
+
+    }
+    &__form{
+        display:flex;
+        flex-direction: row;
+        &-icon{
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        background-color: $mercury;
+        display: inline-block;
+        margin:1rem;
+        
+        }
+        &-inputgroup{
+            display: flex;
+            flex-direction: row;
+            width:100%;
+        }
+        &-field{
+            display: flex;
+            flex-direction: column;
+            width:90%;
+            padding:12px;
+        }
+        &-text{
+            display:flex;
+            flex-direction: column;
+            width:100%;
+        }
+        &-lable{
+            padding-bottom: 4px;
+        }
+    }
+
+}
+.button{
+    padding:16px;
+}
+button{
+    height:40px;
+    background-color: $bandsiteblack;
+    color:$white;
+    width:90%;
+    border-radius: 4px;
+    @include text-styles(12px,20px,700);
+}
+#name{
+    border-radius: 4px;
+    min-height:36px;
+    width:100%;
+    border:1px solid $silver;
+    background-color: $mercury;
+
+}
+#commentarea{
+    border-radius: 4px;
+    min-height:60px;
+    width:100%;
+    border:1px solid $silver;
+    background-color: $mercury;
+}
+
+::placeholder{
+    color:$bandsiteblack;
+    @include text-styles(14px,22px,400);
+}
+
+                //line
+                // <img src="" alt="">
+                // <div class="input">
+                //     name    
+                //     comment
+                // </div>
+                // date
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
