@@ -1,0 +1,14 @@
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
+@use "./partials/typography" as *;
+
+*{
+    font-family: AvenirNext;
+}
+body{
+    margin:0;
+    padding:0;
+}
+h2{
+    margin:0;
+}
