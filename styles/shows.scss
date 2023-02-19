@@ -12,3 +12,294 @@ body{
 h2{
     margin:0;
 }
+/*Index navigation*/
+
+.home{
+    @include tablet{
+        display:flex;
+    }
+
+    &-logo{
+        text-align: center;
+        background-color: $bandsiteblack;
+        padding: 1rem;
+        @include tablet{
+            text-align: center;
+            background-color: $bandsiteblack;
+            padding:2.25rem;
+        }
+
+    }
+    &__image{
+        text-align: center;
+        width:50%;
+        width:7.5rem;
+        height:1.25rem;
+
+    
+    }
+    &__link{
+        text-decoration: none;
+        @include text-styles(1.5rem,2rem,700);
+        @include tablet{
+            text-decoration: none;
+            @include text-styles(3.75rem,4.25rem,700);            
+        }
+
+    }
+    &-nav{
+    background-color: $bandsiteblack;
+    margin:0;
+    padding:0;
+    width:100%;
+    @include tablet{
+            width:100%;
+    }
+    &__list{
+        display: flex;
+        margin:0;
+        padding:0;
+        height:100%;
+        width:100%;
+        @include tablet{
+            width:50%;
+        }
+    }
+    &__item{
+        width:50%;
+        list-style: none;
+        text-align: center;
+        padding: 1rem;
+        margin:0;
+        @include tablet{
+           width:30%;
+           padding:2.25rem;
+           margin:0;
+           list-style: none;
+           text-align: center;
+
+    }
+    }
+    &__link{
+        text-decoration: none;
+        color:$white;
+        @include text-styles(0.875rem,1.375rem,700);
+        @include tablet{
+            text-decoration: none;
+            color:$white;
+            @include text-styles(1.5rem,2rem,600);
+
+        }
+
+    }
+    &__selected{
+        border-bottom: 0.313rem solid $white;
+    }
+}
+}
+.hero{
+    margin-top:0;
+    padding:0;
+    width:100%;
+    height:25rem;
+    background-image: url("../assets/images/Photo-gallery-3.jpg");
+    background-size: cover;
+    background-position: center;
+    &__text{
+        &-h2{
+        @include text-styles(1.5rem,2rem,700);
+        color:$white;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        @include tablet{
+        @include text-styles(2.25rem,2.75rem,700);
+        color:$white;
+        padding-left: 2.25rem;
+        padding-right: 2.25rem;
+        }
+        }
+        &-h3{
+        @include text-styles(14px,22px,600);
+        color:$white;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        @include tablet{
+        @include text-styles(24px,32px,600);
+        color:$white;
+        padding-left: 2.25rem;
+        padding-right: 2.25rem;
+        }
+
+        }
+
+        
+    }
+    &__overlay{
+        width:100%;
+        height:25rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: rgba(#323232, 0.5);
+        z-index: 1;
+        position:absolute;
+        
+        
+
+    }
+}
+
+.button{
+    padding:16px;
+}
+button{
+    height:40px;
+    background-color: $bandsiteblack;
+    color:$white;
+    width:90%;
+    border-radius: 4px;
+    @include text-styles(10px,20px,700);
+}
+
+
+.concerts{
+
+    &__title{
+        @include text-styles(1.5rem,2rem,700);
+        color:$bandsiteblack;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 24px;
+
+    }
+    &__list{
+        &-ticket{
+            display: flex;
+            flex-direction: column;
+            padding:16px;
+        }
+        &-subtitle{
+            color:$mercury;
+            @include text-styles(14px,22px,600);
+        }
+        &-content{
+            color:$bandsiteblack;
+            @include text-styles(13px,19px,400);
+        }
+        &-bold{
+        @include text-styles(13px,19px,700);
+        
+        }
+        &-divider{
+        border-top: 1px solid $mercury;
+        width:100%;
+        }
+    }
+}
+
+footer{
+    background-color: $bandsiteblack;
+
+}
+.footer{
+    &-logo{
+        text-align: left;
+        @include tablet{
+        display: none;
+        &__link{
+            text-decoration: none;
+            @include text-styles(1.5rem,2rem,700);
+            @include tablet{
+            text-decoration: none;
+            @include text-styles(2.25rem,2.75rem,700); 
+        }
+        }
+        }
+    }
+    &-header{
+        @include tablet{
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+
+        }
+        &__logo{
+            display:none;
+            @include tablet{
+                display: inline-block;
+            }
+        }
+            
+
+        &__title{
+            @include text-styles(1.5rem,2rem,700);
+            color:$white;
+            padding:1rem;
+            @include tablet{
+                @include text-styles(2.25rem,2.75rem,700);
+                display: inline-block;
+                width:30%;
+                padding:2.25rem;}
+
+        }
+        &__imgcontainer{
+            padding:1rem;
+            @include tablet{
+            display: inline-block;
+            padding:1rem;
+        }
+        }   
+        &__img{
+            padding:1rem;
+        }
+
+
+
+    } 
+    &-body{
+        @include tablet{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding:2.25rem;
+        }
+        &__section{
+            @include tablet{
+            width:29%;
+            }
+
+        }
+        &__text{
+            @include text-styles(0.813rem,1.125rem,400);
+            color:$white;
+            margin:0;
+            padding-left:1rem;
+            padding-right:1rem;
+            @include tablet{
+                @include text-styles(0.875rem,1.25rem,400);
+                padding:0;
+            }
+        }
+        &__copy{
+            width:100%;
+            padding-top:1rem;
+            padding-bottom:1rem;
+            @include tablet{
+                padding-top:2.25rem;
+                padding-bottom:0;
+                padding-left:0;
+                padding-right:0;
+            }
+        }
+
+    }  
+    &-logo{
+        text-align: left;
+        padding-top:1.5rem;
+        padding-left:1rem;
+        padding-right:1rem;
+        @include tablet{
+            display: none;
+        }
+    }
+}
