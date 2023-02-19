@@ -389,6 +389,40 @@ button {
   font-weight: 400;
 }
 
+.display__timestamp {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #323232;
+}
+.display__section {
+  display: flex;
+  flex-direction: row;
+}
+.display__divider {
+  border-top: 1px solid #E1E1E1;
+}
+.display__avatar {
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  background-color: #E1E1E1;
+  display: inline-block;
+  margin: 1rem;
+}
+.display__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80%;
+}
+.display__text-name {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #323232;
+}
+
 footer {
   background-color: #323232;
 }
