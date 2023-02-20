@@ -162,6 +162,10 @@ button{
 }
 
 
+
+
+
+
 .concerts{
 
     &__title{
@@ -177,6 +181,12 @@ button{
             display: flex;
             flex-direction: column;
             padding:16px;
+            &:hover {
+                background-color:$alabaster;
+            }
+            &:active{
+                background-color:$mercury;
+            }
         }
         &-subtitle{
             color:$mercury;
