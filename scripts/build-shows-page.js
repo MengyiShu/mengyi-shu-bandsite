@@ -90,7 +90,6 @@ ticketClickEl.forEach((ticket) =>{
     console.log(ticket);
     ticket.addEventListener("click",(event) =>{
             ticket.classList.add("concerts__list-selected");
-            console.log("new class has been assigned");
 
     })
 })

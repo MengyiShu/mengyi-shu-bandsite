@@ -260,72 +260,122 @@ h2{
         padding-left:1rem;
         padding-right:1rem;
         padding-bottom: 1rem;
+        @include tablet{
+            @include text-styles(2.25rem,2.75rem,700);
+            color:$bandsiteblack;
+            padding-top:3rem;
+            padding-bottom:2.25rem;
+            padding-left:2.25rem;
+            padding-right:2.25rem;
+
+        }
+        @include desktop{
+            @include text-styles(2.25rem,2.75rem,700);
+            color:$bandsiteblack;
+            padding-top:3rem;
+            padding-bottom:2.25rem;
+            padding-left:2.25rem;
+            padding-right:2.25rem;
+
+        }
 
     }
     &__form{
         display:flex;
         flex-direction: row;
+        @include tablet{
+            width:70%;
+            margin:auto;
+        }
+        @include desktop{
+            width:50%;
+            margin:auto;
+        }
         &-icon{
         border-radius: 50%;
-        width: 36px;
-        height: 36px;
+        width: 2.25rem;
+        height: 2.25rem;
         background-color: $mercury;
         display: inline-block;
         margin:1rem;
+        @include tablet{
+            width:3rem;
+            height:3rem;
+
+        }
+        @include desktop{
+            width:3rem;
+            height:3rem;
+
+        }
         
         }
         &-inputgroup{
             display: flex;
             flex-direction: row;
-            width:100%;
+            // width:100%;
         }
         &-field{
             display: flex;
             flex-direction: column;
             width:90%;
-            padding:12px;
+            padding:0.75rem;
         }
         &-text{
             display:flex;
             flex-direction: column;
             width:100%;
+            box-sizing: border-box;
         }
         &-lable{
-            padding-bottom: 4px;
+            padding-bottom: 0.25rem;
         }
     }
 
 }
 .button{
-    padding:16px;
+    padding:1rem;
+    @include tablet{
+            justify-content: flex-end;
+            
+    }
+
 }
 button{
-    height:40px;
+    height:2.5rem;
     background-color: $bandsiteblack;
     color:$white;
-    width:90%;
-    border-radius: 4px;
-    @include text-styles(12px,20px,700);
+    width:100%;
+    border-radius: 0.25rem;
+    @include text-styles(0.75rem,1.25rem,700);
+    @include tablet{
+        width:30%;
+
+    }
+    @include tablet{
+        width:30%;
+
+    }
 }
 #name{
-    border-radius: 4px;
-    min-height:36px;
+    border-radius: 0.25rem;
+    min-height:2.25rem;
     width:100%;
-    border:1px solid $silver;
+    border:0.063rem solid $silver;
     background-color: $mercury;
 
 }
 #commentarea{
-    border-radius: 4px;
-    min-height:60px;
+    border-radius: 0.25rem;
+    min-height:3.75rem;
     width:100%;
-    border:1px solid $silver;
+    border:0.063rem solid $silver;
     background-color: $mercury;
 }
 
 ::placeholder{
     color:$bandsiteblack;
-    @include text-styles(14px,22px,400);
+    @include text-styles(0.875rem,1.375rem,400);
 }
 
 
@@ -338,24 +388,54 @@ button{
 
 
 .display{
+    @include desktop{
+        display: flex;
+        flex-direction: column;
+        margin:auto;
+    }
+    @include tablet{
+        display: flex;
+        flex-direction: column;
+        width:70%;
+        margin:auto;
+    }
     &__timestamp{
-        @include text-styles(14px,22px,400);
+        @include text-styles(0.875rem,1.375rem,400);
         color:$bandsiteblack;
     }
     &__section{
         display:flex;
         flex-direction: row;
+        @include desktop{
+            width:65%;
+            margin:auto;
+        }
     }
     &__divider{
-        border-top: 1px solid $mercury;
+        border-top: 0.063rem solid $mercury;
+        width:100%;
+        @include desktop{
+            width:65%;
+            margin:auto;
+        }
     }
     &__avatar{
         border-radius:50%;
-        width:36px;
-        height:36px;
+        width:2.25rem;
+        height:2.25rem;
         background-color:$mercury;
         display:inline-block;
         margin:1rem;
+        @include tablet{
+            width:3rem;
+            height:3rem;
+
+        }
+        @include desktop{
+            width:3rem;
+            height:3rem;
+
+        }
 
     }
     &__text{
@@ -364,7 +444,7 @@ button{
         align-items: flex-start;
         width:65%;
         &-name{
-            @include text-styles(14px,22px,400);
+            @include text-styles(0.875rem,1.375rem,400);
             color:$bandsiteblack;
         }
     }
