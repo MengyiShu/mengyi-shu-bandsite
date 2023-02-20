@@ -320,6 +320,9 @@ h2{
             flex-direction: column;
             width:90%;
             padding:0.75rem;
+            @include tablet{
+                padding:1rem;
+            }
         }
         &-text{
             display:flex;
@@ -363,6 +366,12 @@ button{
     width:100%;
     border:0.063rem solid $silver;
     background-color: $mercury;
+    @include tablet{
+        min-height: 3rem;
+    }
+    @include desktop{
+        min-height: 3rem;
+    }
 
 }
 #commentarea{
@@ -371,6 +380,12 @@ button{
     width:100%;
     border:0.063rem solid $silver;
     background-color: $mercury;
+    @include tablet{
+        min-height: 3rem;
+    }
+    @include desktop{
+        min-height: 3rem;
+    }
 }
 
 ::placeholder{
@@ -400,8 +415,14 @@ button{
         margin:auto;
     }
     &__timestamp{
-        @include text-styles(0.875rem,1.375rem,400);
+        @include text-styles(0.813rem,1.125rem,7400);
         color:$bandsiteblack;
+        @include tablet{
+            @include text-styles(0.875rem,1.375rem,400);
+        }
+        @include desktop{
+            @include text-styles(0.875rem,1.375rem,400);
+        }
     }
     &__section{
         display:flex;
@@ -444,8 +465,14 @@ button{
         align-items: flex-start;
         width:65%;
         &-name{
-            @include text-styles(0.875rem,1.375rem,400);
+            @include text-styles(0.813rem,1.125rem,700);
             color:$bandsiteblack;
+            @include tablet{
+                @include text-styles(0.875rem,1.375rem,700);
+            }
+            @include desktop{
+                @include text-styles(0.875rem,1.375rem,700);
+            }
         }
     }
 }

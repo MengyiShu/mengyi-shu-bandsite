@@ -29,8 +29,12 @@ formEl.addEventListener("submit",(event) =>{
     commentList.comment.unshift(commentValue);
 
     let timeValue=new Date().toLocaleDateString();
-    list.timestamp.unshift(timeValue);
-    commentList.timestamp.unshift(timeValue);
+    console.log(timeValue);
+    var datearray = timeValue.split("/");
+
+    var newdate = datearray[1] + '/' + datearray[0] + '/' + datearray[2];
+    list.timestamp.unshift(newdate);
+    commentList.timestamp.unshift(newdate);
     console.log(list);
     var div = document.querySelector('.display');
     while(div.firstChild){    
