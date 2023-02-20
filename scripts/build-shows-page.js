@@ -85,11 +85,22 @@ function displayConcert(concertList){
 displayConcert(concertList);
 
 const ticketClickEl=document.querySelectorAll(".concerts__list-ticket");
+const copyticketEl=ticketClickEl;
 console.log(ticketClickEl[0]);
 ticketClickEl.forEach((ticket) =>{
     console.log(ticket);
     ticket.addEventListener("click",(event) =>{
-            ticket.classList.add("concerts__list-selected");
+        console.log(event);
+        ticket.classList.add("concerts__list-selected");
+    for(let i =0;i<ticketClickEl.length;i++){
+        if (ticketClickEl[i].classList.contains("concerts__list-selected") && ticketClickEl[i] !== ticket){
+            console.log("it's selected");
+            ticketClickEl[i].classList.remove("concerts__list-selected")
+            console.log("it has been removed");
+        }
+        console.log(copyticketEl[i]);
+    }
+
 
     })
 })
