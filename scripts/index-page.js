@@ -11,7 +11,6 @@ const commentList={
 
 
 const formEl=document.querySelector(".comment__form");
-console.log(formEl);
 formEl.addEventListener("submit",(event) =>{
     event.preventDefault();
     //constreuct new commentList

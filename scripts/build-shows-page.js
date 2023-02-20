@@ -3,7 +3,7 @@
 const concertList={
     date:["Mon Sept 06 2021 ","Tue Sept 21 2021","Fri Oct 15 2021","Sat Nov 06 2021","Fri Nov 26 2021","Wed Dec 15 2021 "],
     venue:["Ronald Lane ","Pier 3 East","View Lounge ","Hyatt Agency ","Moscow Center","Press Club"],
-    location:["San Francisco, CA","San Francisco, CA","San Francisco, CA","San Francisco, CA","San Francisco, CA"]
+    location:["San Francisco, CA","San Francisco, CA","San Francisco, CA","San Francisco, CA","San Francisco, CA","San Francisco, CA"]
 }
 
 function displayConcert(concertList){
@@ -59,7 +59,7 @@ function displayConcert(concertList){
         //button
 
         const buttonBoxEl=document.createElement("div");
-        buttonBoxEl.classList.add("button");
+        buttonBoxEl.classList.add("concerts__list-button");
         const buttonEl=document.createElement("button");
         buttonEl.innerHTML="BUY TICKETS";
         buttonBoxEl.appendChild(buttonEl);
@@ -83,6 +83,20 @@ function displayConcert(concertList){
     }
 }
 displayConcert(concertList);
+
+const ticketClickEl=document.querySelectorAll(".concerts__list-ticket");
+console.log(ticketClickEl[0]);
+ticketClickEl.forEach((ticket) =>{
+    console.log(ticket);
+    ticket.addEventListener("click",(event) =>{
+            ticket.classList.add("concerts__list-selected");
+            console.log("new class has been assigned");
+
+    })
+})
+
+
+
 
 
 
