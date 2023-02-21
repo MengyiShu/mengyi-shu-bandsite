@@ -90,17 +90,6 @@ function displayComment(commentList) {
 
 
 
-            //     <hr class="display__divider">
-            // <div class="display__section">
-            // <img class="display__avatar"src="" alt="">
-            // <div class="display__text">
-            //     <p class="display__text-name">Connor Walton</p>
-            //     <p class="display__text-content">This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work
-            //     deserves reverence. Let us appreciate this for what it is and what it contains.</p>
-            // </div>
-            // <p class="display__timestamp">02/17/2021</p>
-            // </div>
-
 
 
 

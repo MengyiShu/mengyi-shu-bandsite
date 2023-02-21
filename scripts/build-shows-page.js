@@ -94,9 +94,7 @@ ticketClickEl.forEach((ticket) =>{
         ticket.classList.add("concerts__list-selected");
     for(let i =0;i<ticketClickEl.length;i++){
         if (ticketClickEl[i].classList.contains("concerts__list-selected") && ticketClickEl[i] !== ticket){
-            console.log("it's selected");
             ticketClickEl[i].classList.remove("concerts__list-selected")
-            console.log("it has been removed");
         }
         console.log(copyticketEl[i]);
     }
