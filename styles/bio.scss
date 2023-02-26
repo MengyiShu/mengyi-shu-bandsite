@@ -135,6 +135,13 @@ h2{
 }
 
 .musician{
+        margin:1rem;
+        @include tablet{
+        margin:2.25rem;
+    }
+        @include desktop{
+        margin:max(2.25rem,5%);
+    }
     &__header{
         display:inline-block;
         @include text-styles(1.5rem,2rem,700);
@@ -171,6 +178,7 @@ h2{
         }
     }
     &__subheader{
+        margin:1rem;
         @include text-styles(0.875rem,1.375rem,600);
         color:$bandsiteblack;
         padding-top: 1.5rem;
@@ -179,16 +187,25 @@ h2{
         margin:0;
         text-align: left;
         @include tablet{
+        margin:2.25rem;
         padding-top: 3rem;
         padding-left: 2.25rem;
         padding-right: 2.25rem;
             @include text-styles(1.5rem, 2rem,600)
         }
+        @include desktop{
+            margin:auto;
+        }
     }
     &-bodytext__container{
+        margin:1rem;
+        @include desktop{
+        margin:auto;
+    }
         @include tablet{
             column-count:2;
             padding:2.25rem;
+            margin:2.25rem;
         }
     }
     &__bodytext{
@@ -210,6 +227,13 @@ h2{
 .photogallery{
     background-color: $alabaster;
     &__header{
+        margin:1rem;
+        @include tablet{
+        margin:2.25rem;
+    }
+        @include desktop{
+        margin:max(2.25rem,5%);
+    }
         @include text-styles(1.5rem,2rem,700);
         color:$bandsiteblack;
         padding-top:1.5rem;
@@ -223,6 +247,13 @@ h2{
         }
     }
     &-box{
+        margin:1rem;
+        @include tablet{
+        margin:2.25rem;
+    }
+        @include desktop{
+        margin:max(2.25rem,5%);
+    }
         display: flex;
         flex-direction: column;
         padding:1rem;
@@ -255,8 +286,16 @@ h2{
 
 //Comment Section
 .comment{
+        margin:1rem;
+        @include tablet{
+        margin:2.25rem;
+    }
+        @include desktop{
+        margin:max(2.25rem,5%);
+    }
 
     &__header{
+        margin:1rem;
         @include text-styles(1.5rem,2rem,700);
         color:$bandsiteblack;
         padding-top:1.5rem;
@@ -407,6 +446,13 @@ button{
 
 
 .display{
+        margin:1rem;
+    @include tablet{
+        margin:2.25rem;
+    }
+    @include desktop{
+        margin:auto;
+    }
     @include desktop{
         display: flex;
         flex-direction: column;
@@ -431,9 +477,11 @@ button{
     &__section{
         display:flex;
         flex-direction: row;
+        padding:1rem;
         @include desktop{
             width:65%;
             margin:auto;
+            padding:2.25rem;
         }
     }
     &__divider{
@@ -502,6 +550,13 @@ footer{
 
 }
 .footer{
+    margin:1rem;
+    @include tablet{
+        margin:2.25rem;
+    }
+    @include desktop{
+        margin:max(2.25rem,5%);
+    }
     &-logo{
         text-align: left;
         @include tablet{
@@ -577,8 +632,10 @@ footer{
             padding:2.25rem;
         }
         &__section{
+            padding:16px;
             @include tablet{
             width:29%;
+            padding:36px;
             }
 
         }

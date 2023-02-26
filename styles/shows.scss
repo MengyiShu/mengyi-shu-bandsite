@@ -279,6 +279,13 @@ footer{
 
 }
 .footer{
+    margin:1rem;
+    @include tablet{
+        margin:2.25rem;
+    }
+    @include desktop{
+        margin:auto;
+    }
     &-logo{
         text-align: left;
         @include tablet{
