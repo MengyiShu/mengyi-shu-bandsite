@@ -1,61 +1,9 @@
-const commentList={
-        name:["Connor Walton","Emilie Beach","Miles Acosta"],
-        timestamp:["02/17/2021","01/09/2021","12/20/2020"],
-        comment:["This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-    "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-    "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough."]
+//function
 
-}
-
-
-
-
-const formEl=document.querySelector(".comment__form");
-formEl.addEventListener("submit",(event) =>{
-    event.preventDefault();
-    //constreuct new commentList
-    const list={};
-    list.name=[];
-    list.timestamp=[];
-    list.comment=[];
-    // How do we access the user input
-    let nameValue = event.target.name.value;
-    list.name.unshift(nameValue);
-    commentList.name.unshift(nameValue);
-    console.log("nameValue: ", nameValue);
-    let commentValue = event.target.comment.value;
-    console.log("commentValue: ", commentValue);
-    list.comment.unshift(commentValue);
-    commentList.comment.unshift(commentValue);
-
-    let timeValue=new Date().toLocaleDateString();
-    console.log(timeValue);
-    var datearray = timeValue.split("/");
-
-    var newdate = datearray[1] + '/' + datearray[0] + '/' + datearray[2];
-    list.timestamp.unshift(newdate);
-    commentList.timestamp.unshift(newdate);
-    console.log(list);
-    var div = document.querySelector('.display');
-    while(div.firstChild){    
-        div.removeChild(div.firstChild);
-    }
-    displayComment(commentList);
-
-    formEl.reset();
-
-
-    //display comment
-
-
-
-    
-})
 
 
 function displayComment(commentList) {
-    console.log(commentList.name.length);
-    for(let i=0;i<commentList.name.length;i++){
+    for(let i=0;i<commentList.length;i++){
         const displayEl=document.querySelector(".display");
         const divider=document.createElement("hr");
         divider.classList.add("display__divider");
@@ -67,15 +15,13 @@ function displayComment(commentList) {
         textEl.classList.add("display__text");
         const nameEl=document.createElement("p");
         nameEl.classList.add("display__text-name");
-        nameEl.innerHTML=commentList.name[i];
+        nameEl.innerHTML=commentList[i].name;
         const contentEl=document.createElement("p");
         contentEl.classList.add("display__text-content");
-        contentEl.innerHTML=commentList.comment[i];
+        contentEl.innerHTML=commentList[i].comment;
         const timeEl=document.createElement("p");
         timeEl.classList.add("display__timestamp");
-        timeEl.innerHTML=commentList.timestamp[i]
-        // const d=new Date();
-        // console.log(d.toLocaleDateString());
+        timeEl.innerHTML=commentList[i].timestamp
         textEl.appendChild(nameEl);
         textEl.appendChild(contentEl);
         sectionEl.appendChild(img);
@@ -85,7 +31,126 @@ function displayComment(commentList) {
         displayEl.appendChild(sectionEl);
         }
     }
+
+
+
+function convertDate(dateList){
+    for(let i =0;i<dateList.length;i++){
+        var date = new Date(dateList[i].timestamp);
+        const fdate = date.getFullYear() + '/' + ("0" + (date.getMonth() + 1)).slice(-2) + '/' + ("0" + date.getDate()).slice(-2);
+        dateList[i].timestamp=fdate;
+        
+    }
+}
+
+
+
+
+function sortDateList(list){
+    list.sort((p1, p2) => {
+    date1 = p1.timestamp.split('/'), date2 = p2.timestamp.split('/');
+    let day1 = parseInt(date1[2]);
+    let day2 = parseInt(date2[2]);
+    let month1 = parseInt(date1[1]);
+    let month2 = parseInt(date2[1]);
+    let year1 = parseInt(date1[0]);
+    let year2 = parseInt(date2[0]);
+    if (year1 !== year2) {
+        return year2 - year1;
+    } else if (month1 !== month2) {
+        return month2 - month1;
+    } else {
+        return day2 - day1;
+    }
+});
+
+}
+
+
+
+const swapElements = (array, index1, index2) => {
+    let temp = array[index1];
+    array[index1] = array[index2];
+    array[index2] = temp;
+};   
+
+
+
+function createCommentsList(data){
+    const result=[];
+    for (i = 0;i<data.length;i++){
+        result[i]={
+            name:data[i].name,
+            comment:data[i].comment,
+            timestamp:data[i].timestamp
+
+        }
+    }
+    return result;
+
+}
+
+const url="https://project-1-api.herokuapp.com/comments?api_key=16fc9a4a-1ce5-487b-a595-3b79fced0027";
+
+
+
+axios.get(url)
+.then((response)=>{
+    const commentList=createCommentsList(response.data);
+    convertDate(commentList);
+    const temtList=commentList.timestamp;
+    sortDateList(commentList)
+    displayComment(commentList); 
+    
+
+    const formEl=document.querySelector(".comment__form");
+    formEl.addEventListener("submit",(event) =>{
+    event.preventDefault();
+    //constreuct new commentList
+    const list={};
+    // How do we access the user input
+    let nameValue = event.target.name.value;
+    let commentValue = event.target.comment.value;
+
+    let timeValue=new Date().toDateString();
+    list.name=nameValue;
+    list.timestamp=timeValue;
+    list.comment=commentValue;
+    commentList.unshift(list);
+            axios.post(url,{
+      "name": nameValue,
+      "comment": commentValue,
+    })
+
+    var div = document.querySelector('.display');
+    while(div.firstChild){    
+        div.removeChild(div.firstChild);
+    }
+    sortDateList(commentList);
     displayComment(commentList);
+
+    formEl.reset();
+
+
+
+
+
+    
+})
+
+
+
+
+})
+
+
+
+
+
+
+
+
+    
 
 
 

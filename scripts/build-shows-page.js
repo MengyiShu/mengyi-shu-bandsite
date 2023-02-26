@@ -1,13 +1,44 @@
 
-
-const concertList={
-    date:["Mon Sept 06 2021 ","Tue Sept 21 2021","Fri Oct 15 2021","Sat Nov 06 2021","Fri Nov 26 2021","Wed Dec 15 2021 "],
-    venue:["Ronald Lane ","Pier 3 East","View Lounge ","Hyatt Agency ","Moscow Center","Press Club"],
-    location:["San Francisco, CA","San Francisco, CA","San Francisco, CA","San Francisco, CA","San Francisco, CA","San Francisco, CA"]
+function convertDate(dateList){
+    for(let i =0;i<dateList.length;i++){
+        var date = new Date(parseInt(dateList[i].date)).toDateString();
+        dateList[i].date=date;
+        
+    }
+    return dateList;
 }
 
+
+function createShowList(data){
+        const result=[];
+        for(let i =0;i<data.length;i++){
+            result[i]={
+                date:data[i].date,
+                venue:data[i].place,
+                location:data[i].location
+            };
+            // result[i].date=data[i].date;
+            // result[i].venue=data[i].place;
+            // result[i].location=data[i].location;
+
+        }
+        return result;
+
+
+}
+axios
+.get("https://project-1-api.herokuapp.com/showdates?api_key=61cbfe75-df6b-4055-802c-ea7aff07d946")
+.then((response)=>{
+    const showList=createShowList(response.data);
+    convertDate(showList);
+    displayConcert(showList);
+
+})
+
+
+
 function displayConcert(concertList){
-    for(let i=0;i<concertList.date.length;i++){
+    for(let i=0;i<concertList.length;i++){
         const listEl=document.querySelector(".concerts__list");
         const ticketEl=document.createElement("div");
         ticketEl.classList.add("concerts__list-ticket");
@@ -21,7 +52,7 @@ function displayConcert(concertList){
         const dateContentEl=document.createElement("p");
         dateContentEl.classList.add("concerts__list-content");
         dateContentEl.classList.add("concerts__list-bold");
-        dateContentEl.innerHTML=concertList.date[i];
+        dateContentEl.innerHTML=concertList[i].date;
         dateEl.appendChild(datetitleEl);
         dateEl.appendChild(dateContentEl);
 
@@ -36,7 +67,7 @@ function displayConcert(concertList){
 
         const venueContentEl=document.createElement("p");
         venueContentEl.classList.add("concerts__list-content");
-        venueContentEl.innerHTML=concertList.venue[i];
+        venueContentEl.innerHTML=concertList[i].venue;
 
         venueEl.appendChild(venuetitleEl);
         venueEl.appendChild(venueContentEl);
@@ -51,7 +82,7 @@ function displayConcert(concertList){
 
         const locationContentEl=document.createElement("p");
         locationContentEl.classList.add("concerts__list-content");
-        locationContentEl.innerHTML=concertList.location[i];
+        locationContentEl.innerHTML=concertList[i].location;
 
         locationEl.appendChild(locationtitleEl);
         locationEl.appendChild(locationContentEl);
@@ -82,21 +113,17 @@ function displayConcert(concertList){
         listEl.append(divEl);
     }
 }
-displayConcert(concertList);
+// displayConcert(concertListO);
 
 const ticketClickEl=document.querySelectorAll(".concerts__list-ticket");
 const copyticketEl=ticketClickEl;
-console.log(ticketClickEl[0]);
 ticketClickEl.forEach((ticket) =>{
-    console.log(ticket);
     ticket.addEventListener("click",(event) =>{
-        console.log(event);
         ticket.classList.add("concerts__list-selected");
     for(let i =0;i<ticketClickEl.length;i++){
         if (ticketClickEl[i].classList.contains("concerts__list-selected") && ticketClickEl[i] !== ticket){
             ticketClickEl[i].classList.remove("concerts__list-selected")
         }
-        console.log(copyticketEl[i]);
     }
 
 
