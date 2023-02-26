@@ -90,7 +90,7 @@ function createCommentsList(data){
 
 }
 
-const url="https://project-1-api.herokuapp.com/comments?api_key=16fc9a4a-1ce5-487b-a595-3b79fced0027";
+const url="https://project-1-api.herokuapp.com/comments?api_key=ca095d44-fa02-48fd-8b13-b5f3704f917a";
 
 
 
