@@ -106,13 +106,13 @@ h2{
     background-size: cover;
     background-position: center;
     &__text{
-        &-h2{
+        &-h1{
         @include text-styles(1.5rem,2rem,700);
         color:$white;
         padding-left: 1rem;
         padding-right: 1rem;
         @include tablet{
-        @include text-styles(2.25rem,2.75rem,700);
+        @include text-styles(3.75rem,4.25rem,700);
         color:$white;
         padding-left: 2.25rem;
         padding-right: 2.25rem;
