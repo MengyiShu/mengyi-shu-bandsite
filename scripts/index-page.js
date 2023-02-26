@@ -112,9 +112,12 @@ axios.get(url)
     let nameValue = event.target.name.value;
     let commentValue = event.target.comment.value;
 
-    let timeValue=new Date().toDateString();
+    let timeValue=new Date().toLocaleDateString();
+    var datearray = timeValue.split("/");
+
+    var newdate = datearray[2] + '/' + datearray[1] + '/' + datearray[0];
     list.name=nameValue;
-    list.timestamp=timeValue;
+    list.timestamp=newdate;
     list.comment=commentValue;
     commentList.unshift(list);
             axios.post(url,{
