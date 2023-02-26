@@ -113,7 +113,7 @@ h2{
         padding-left: 1rem;
         padding-right: 1rem;
         @include tablet{
-            @include text-styles(2.25rem,2.75rem,700);
+            @include text-styles(3.75rem,4.25rem,700);
             color:$white;
             padding-left: 2.25rem;
             padding-right: 2.25rem;
@@ -232,6 +232,9 @@ h2{
             justify-content: space-evenly;
             padding:2.25rem;
         }
+        @include desktop{
+            margin:auto;
+        }
         &__container{
             text-align: center;
             margin:0;
@@ -276,6 +279,7 @@ h2{
             padding-bottom:2.25rem;
             padding-left:2.25rem;
             padding-right:2.25rem;
+            margin:auto;
 
         }
 
@@ -523,6 +527,14 @@ footer{
             display:none;
             @include tablet{
                 display: inline-block;
+                margin-left:15vw;
+                margin-right:36px;
+            }
+            @include desktop{
+                display: inline-block;
+                margin-left:40vw;
+                margin-right:36px;
+
             }
         }
             
@@ -543,7 +555,12 @@ footer{
             @include tablet{
             display: inline-block;
             padding:1rem;
+            width:30vw;
         }
+            @include desktop{
+                display: inline-block;
+                width:30vw;
+            }
         }   
         &__img{
             padding:1rem;

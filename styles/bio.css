@@ -145,8 +145,8 @@ h2 {
 }
 @media (min-width: 768px) {
   .hero__text {
-    font-size: 2.25rem;
-    line-height: 2.75rem;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
     font-weight: 700;
     color: #FFFFFF;
     padding-left: 2.25rem;
@@ -285,6 +285,11 @@ h2 {
     padding: 2.25rem;
   }
 }
+@media (min-width: 1280px) {
+  .photogallery-box {
+    margin: auto;
+  }
+}
 .photogallery-box__container {
   text-align: center;
   margin: 0;
@@ -334,6 +339,7 @@ h2 {
     padding-bottom: 2.25rem;
     padding-left: 2.25rem;
     padding-right: 2.25rem;
+    margin: auto;
   }
 }
 .comment__form {
@@ -618,6 +624,15 @@ footer {
 @media (min-width: 768px) {
   .footer-header__logo {
     display: inline-block;
+    margin-left: 15vw;
+    margin-right: 36px;
+  }
+}
+@media (min-width: 1280px) {
+  .footer-header__logo {
+    display: inline-block;
+    margin-left: 40vw;
+    margin-right: 36px;
   }
 }
 .footer-header__title {
@@ -644,6 +659,13 @@ footer {
   .footer-header__imgcontainer {
     display: inline-block;
     padding: 1rem;
+    width: 30vw;
+  }
+}
+@media (min-width: 1280px) {
+  .footer-header__imgcontainer {
+    display: inline-block;
+    width: 30vw;
   }
 }
 .footer-header__img {

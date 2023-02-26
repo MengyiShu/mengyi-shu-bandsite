@@ -1,4 +1,4 @@
-
+//function
 function convertDate(dateList){
     for(let i =0;i<dateList.length;i++){
         var date = new Date(parseInt(dateList[i].date)).toDateString();
@@ -17,9 +17,6 @@ function createShowList(data){
                 venue:data[i].place,
                 location:data[i].location
             };
-            // result[i].date=data[i].date;
-            // result[i].venue=data[i].place;
-            // result[i].location=data[i].location;
 
         }
         return result;
@@ -113,7 +110,6 @@ function displayConcert(concertList){
         listEl.append(divEl);
     }
 }
-// displayConcert(concertListO);
 
 const ticketClickEl=document.querySelectorAll(".concerts__list-ticket");
 const copyticketEl=ticketClickEl;
