@@ -680,6 +680,7 @@ footer {
 @media (min-width: 1280px) {
   .footer {
     margin: max(2.25rem, 5%);
+    margin-bottom: 0;
   }
 }
 .footer-logo {

@@ -556,6 +556,7 @@ footer{
     }
     @include desktop{
         margin:max(2.25rem,5%);
+        margin-bottom: 0;
     }
     &-logo{
         text-align: left;

@@ -285,6 +285,7 @@ footer{
     }
     @include desktop{
         margin:auto;
+        margin-bottom: 0;
     }
     &-logo{
         text-align: left;
