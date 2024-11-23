@@ -1,0 +1,502 @@
+@font-face {
+  font-family: "AvenirNext";
+  src: url("../../assets/fonts/Alternative files/AvenirNextLTPro.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AvenirNext";
+  src: url("../../assets/fonts/Alternative files/AvenirNextLTProBold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AvenirNext";
+  src: url("../../assets/fonts/Alternative files/AvenirNextLTProDemi.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+* {
+  font-family: AvenirNext;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+/*Index navigation*/
+@media (min-width: 768px) {
+  .home {
+    display: flex;
+  }
+}
+.home-logo {
+  text-align: center;
+  background-color: #323232;
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  .home-logo {
+    text-align: center;
+    background-color: #323232;
+    padding: 2.25rem;
+  }
+}
+.home__image {
+  text-align: center;
+  width: 50%;
+  width: 7.5rem;
+  height: 1.25rem;
+}
+.home__link {
+  text-decoration: none;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .home__link {
+    text-decoration: none;
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+  }
+}
+.home-nav {
+  background-color: #323232;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .home-nav {
+    width: 100%;
+  }
+}
+.home-nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .home-nav__list {
+    width: 50%;
+  }
+}
+.home-nav__item {
+  width: 50%;
+  list-style: none;
+  text-align: center;
+  padding: 1rem;
+  margin: 0;
+}
+@media (min-width: 768px) {
+  .home-nav__item {
+    width: 30%;
+    padding: 2.25rem;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+  }
+}
+.home-nav__link {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .home-nav__link {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+  }
+}
+.home-nav__selected {
+  border-bottom: 0.313rem solid #FFFFFF;
+}
+
+.hero {
+  margin-top: 0;
+  padding: 0;
+  width: 100%;
+  height: 25rem;
+  background-image: url("../assets/images/Photo-gallery-3.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.hero__text-h1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media (min-width: 768px) {
+  .hero__text-h1 {
+    font-size: 3.75rem;
+    line-height: 4.25rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+}
+.hero__text-h3 {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media (min-width: 768px) {
+  .hero__text-h3 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+  }
+}
+.hero__overlay {
+  width: 100%;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: rgba(50, 50, 50, 0.5);
+  z-index: 1;
+  position: absolute;
+}
+
+button {
+  height: 3.5rem;
+  background-color: #323232;
+  color: #FFFFFF;
+  width: 90%;
+  border-radius: 0.25rem;
+  margin: 0;
+  padding: 0;
+  font-size: 0.625rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+}
+button:hover {
+  background-color: #000000;
+}
+
+@media (min-width: 1280px) {
+  .concerts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+.concerts__title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #323232;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1.5rem;
+}
+@media (min-width: 1280px) {
+  .concerts__title {
+    padding-top: 3rem;
+    width: 40%;
+    text-align: center;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+  }
+}
+@media (min-width: 768px) {
+  .concerts__title {
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+    padding-left: 2.25rem;
+    padding-right: 2.25rem;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+  }
+}
+@media (min-width: 1280px) {
+  .concerts__list {
+    width: 50%;
+    padding-top: 3rem;
+  }
+}
+.concerts__list-selected {
+  background-color: #E1E1E1;
+}
+.concerts__list-ticket {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  .concerts__list-ticket {
+    padding: 1.5rem 1rem;
+  }
+}
+.concerts__list-ticket:hover {
+  background-color: #FAFAFA;
+}
+@media (min-width: 768px) {
+  .concerts__list-ticket {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+.concerts__list-subtitle {
+  color: #E1E1E1;
+  font-size: 0.813rem;
+  line-height: 1.188rem;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  .concerts__list-subtitle {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
+}
+@media (min-width: 1280px) {
+  .concerts__list-subtitle {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
+}
+.concerts__list-content {
+  color: #323232;
+  font-size: 0.813rem;
+  line-height: 1.188rem;
+  font-weight: 400;
+}
+@media (min-width: 768px) {
+  .concerts__list-content {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
+}
+@media (min-width: 1280px) {
+  .concerts__list-content {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
+}
+.concerts__list-bold {
+  font-size: 0.813rem;
+  line-height: 1.188rem;
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .concerts__list-bold {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
+}
+@media (min-width: 1280px) {
+  .concerts__list-bold {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+  }
+}
+.concerts__list-divider {
+  border-top: 0.063rem solid #E1E1E1;
+  width: 100%;
+}
+.concerts__list-button {
+  padding: 1rem;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .concerts__list-button {
+    min-width: 9.375rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media (min-width: 1280px) {
+  .concerts__list-button {
+    min-width: 9.375rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+footer {
+  background-color: #323232;
+}
+
+.footer {
+  margin: 1rem;
+}
+@media (min-width: 768px) {
+  .footer {
+    margin: 2.25rem;
+  }
+}
+@media (min-width: 1280px) {
+  .footer {
+    margin: auto;
+    margin-bottom: 0;
+  }
+}
+.footer-logo {
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .footer-logo {
+    display: none;
+  }
+  .footer-logo__link {
+    text-decoration: none;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .footer-logo__link {
+    text-decoration: none;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+  }
+}
+@media (min-width: 768px) {
+  .footer-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.footer-header__logo {
+  display: none;
+}
+@media (min-width: 768px) {
+  .footer-header__logo {
+    display: inline-block;
+    margin-left: 15vw;
+    margin-right: 36px;
+  }
+}
+@media (min-width: 1280px) {
+  .footer-header__logo {
+    display: inline-block;
+    margin-left: 40vw;
+    margin-right: 36px;
+  }
+}
+.footer-header__title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  .footer-header__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+    display: inline-block;
+    width: 30%;
+    padding: 2.25rem;
+  }
+}
+.footer-header__imgcontainer {
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  .footer-header__imgcontainer {
+    display: inline-block;
+    padding: 1rem;
+    width: 30vw;
+  }
+}
+@media (min-width: 1280px) {
+  .footer-header__imgcontainer {
+    display: inline-block;
+    width: 30vw;
+  }
+}
+.footer-header__img {
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  .footer-body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 2.25rem;
+  }
+}
+@media (min-width: 768px) {
+  .footer-body__section {
+    width: 29%;
+  }
+}
+.footer-body__text {
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  color: #FFFFFF;
+  margin: 0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media (min-width: 768px) {
+  .footer-body__text {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 400;
+    padding: 0;
+  }
+}
+.footer-body__copy {
+  width: 100%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .footer-body__copy {
+    padding-top: 2.25rem;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+.footer-logo {
+  text-align: left;
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media (min-width: 768px) {
+  .footer-logo {
+    display: none;
+  }
+}/*# sourceMappingURL=shows.css.map */
